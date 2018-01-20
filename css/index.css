@@ -1,0 +1,432 @@
+/*
+* @Author: Administrator
+* @Date:   2018-01-17 14:33:25
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-01-20 15:35:24
+*/
+/* 宽1080px长1377px 100px=1rem */
+/* 清除浏览器默认样式 */
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #f5f5f5;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 546682 */
+  src: url('//at.alicdn.com/t/font_546682_pvzfok36hw5vzpvi.eot');
+  src: url('//at.alicdn.com/t/font_546682_pvzfok36hw5vzpvi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_546682_pvzfok36hw5vzpvi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_546682_pvzfok36hw5vzpvi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_546682_pvzfok36hw5vzpvi.svg#iconfont') format('svg');
+}
+.screen{
+	/* 通屏宽度 */
+	width: 100%;
+	height: 13.77rem;
+	/* background: red; */
+	/* 设置背景图片 */
+	background: url(../img/screen.png) no-repeat left bottom,-webkit-linear-gradient(top,#3bbeff,#47e9ff);
+	background-size: contain;
+}
+.header{
+	width: 100%;
+	height: 1.58rem;
+	/* background: red; */
+	/* 字体大小 */
+	font-size: 0.6rem;
+	/* 字体颜色 */
+	color: #fff;
+	/* 字体加粗 */
+	font-weight: bold;
+	/* 文本属性 */
+	/* 文本水平居中 */
+	text-align: center;
+	/* 文本垂直居中 */
+	line-height: 1.58rem;
+}
+.screen .box{
+	width: 2.1rem;
+	height: 1.26rem;
+	background: rgb(241,161, 98);
+	border-radius: 0.19rem;
+	margin-left: 0.27rem;
+	margin-top: 0.16rem;
+	/* 内填充 */
+	padding-top: 0.13rem;
+	/* 自定义盒模型  -- 解决家padding盒子变大 */
+	box-sizing: border-box;
+}
+.screen .box h2{
+	font-size: 0.3rem;
+	color: #fff;
+	text-align: center;
+}
+.screen .box h3{
+	font-size: 0.36rem;
+	color: #fff;
+	text-align: center;
+}
+.screen .temperature{
+	width: 100%;
+	height: 1.75rem;
+	/* background: red; 背景色用来辅助*/
+	margin-top: 0.28rem;
+	font-size: 1.3rem;
+	color: #fff;
+	line-height: 1.75rem;
+	text-align: center;
+}
+.screen .qingkuang{
+	width: 100%;
+	height: 0.92rem;
+	/* background: red; */
+	font-size: 0.58rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.92rem;
+}
+.screen .shidu{
+	width: 100%;
+	height: 0.7rem;
+	/* background: red; */
+	font-size: 0.36rem;
+	color: #fff;
+	line-height: 0.7rem;
+	text-align: center;
+}
+.screen .tishi{
+	width: 100%;
+	height: 0.8rem;
+	/* background: red; */
+	font-size: 0.42rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.8rem;
+	margin-top: 1.32rem;
+}
+.con1{
+	width: 100%;
+	height: 2.94rem;
+	background: #fff;
+	border-bottom: 0.03rem solid #e4e4e4;
+	/* 上填充 */
+	padding-top: 0.72rem;
+	/* 左填充 */
+	padding-left: 0.58rem;
+	box-sizing: border-box;
+}
+.content{
+	width: 4.85rem;
+	height: 1.47rem;
+	/* background: pink; */
+	border-right: 0.03rem solid #e4e4e4;
+	padding-right: 0.59rem;
+	box-sizing: border-box;
+	float: left;
+}
+/* 伪类选择器 nth-child(2)*/
+.con1 .content:nth-child(2){
+	padding-right: 0;
+	border-right: none;
+	padding-left: 0.59rem;
+}
+/* 弹性布局 */
+.content .top{
+	width: 100%;
+	height: 0.59rem;
+	/* background: yellowgreen; */
+	/* 指定为弹性布局 */
+	display: flex;
+	/* 两端对其 */
+	justify-content: space-between;
+}
+.content .top .day{
+	font-size: 0.38rem;
+	color: #434343;
+	line-height: 0.59rem;
+}
+.content .top .temperature{
+	font-size: 0.3rem;
+	color: #434343;
+	line-height: 0.59rem;
+}
+.content .bottom{
+	width: 100%;
+	height: 0.86rem;
+	/* background: blue; */
+	/* 指定为弹性布局 横排*/
+	display: flex;
+	/* 两端对其 */
+	justify-content: space-between;
+}
+.content .bottom .weather{
+	font-size: 0.36rem;
+	color: #434343;
+	line-height: 0.86rem;
+}
+.content .bottom .pic{
+	width: 0.48rem;
+	height: 0.48rem;
+	/* background: red; */
+	margin-top: 0.2rem;
+	/* background: url('../img/0.png') no-repeat; */
+	background-repeat: no-repeat;
+	background-size: 0.48rem 0.48rem;
+}
+.con2{
+	width: 100%;
+	height: 3.9rem;
+	background: #fff;
+	margin-top: 0.27rem;
+	border-top: 0.03rem solid #e4e4e4;
+	border-bottom: 0.03rem solid #e4e4e4;
+	/* padding-top: 0.9rem; */
+	/* padding-bottom: 0.8rem; */
+	/* 填充的方法 */
+	/* 上 右 下 左 */
+	padding: 0.9rem 0  0.8rem 0;
+	box-sizing: border-box;
+	/* 实现滚动: 超出部分以滚动条方式显示 */
+	overflow-x: auto;
+}
+/* 去掉滚动条 */
+.con2::-webkit-scrollbar{
+	height: 0;
+}
+.con2 .wrap{
+	height: 100%;
+	display: flex;
+}
+.con2 .wrap .now{
+	width: 1.68rem;
+	height: 100%;
+	/* background: yellow; */
+	/* 禁止缩小 */
+	flex-shrink: 0;
+	display: flex;
+	/* 改变主轴方向 */
+	flex-direction: column;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.con2 .wrap .now .now_time{
+	font-size: 0.24rem;
+	color: #999999;
+	font-weight: normal;
+	text-align: center;
+
+}
+/* box是孩子    now_icon是孩子的属性 */
+.con2 .wrap .now:nth-child(n) .now_icon{
+	width: 1rem;
+	height: 1rem;
+	/* background: red; */
+	margin: 0 auto;
+	/* 插入图片 */
+	/* background: url('../img/0.png') no-repeat; */
+	background-repeat: no-repeat;
+	/* 图片大小 */
+	background-size: 1rem 1rem;
+}
+.con2 .wrap .now .now_temperature{
+	font-size: 0.28rem;
+	color: #333333;
+	/* 字体加粗 */
+	font-weight: normal;
+	/* 居中 */
+	text-align: center;
+}
+.con3{
+	width: 100%;
+	height: 9.42rem;
+	background: #fff;
+	margin-top: 0.27rem;
+	border-top: 0.03rem solid #e4e4e4;
+	border-bottom: 0.03rem solid #e4e4e4;
+	/* padding-top: 0.9rem; */
+	/* padding-bottom: 0.8rem; */
+	/* 填充的方法 */
+	/* 上 右 下 左 */
+	padding: 1.2rem 0  0.93rem 0;
+	box-sizing: border-box;
+	/* 实现滚动: 超出部分以滚动条方式显示 */
+	overflow-x: auto;
+}
+/* 去掉滚动条 */
+.con3::-webkit-scrollbar{
+	height: 0;
+}
+.con3 .wrap{
+	height: 100%;
+	/* 弹性布局  横排 */
+	display: flex;
+}
+.con3 .wrap .recent{
+	width: 2.5rem;
+	height: 100%;
+	/* background: yellow; */
+	/* 禁止缩小 */
+	flex-shrink: 0;
+	display: flex;
+	/* 改变主轴方向 */
+	flex-direction: column;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.con3 .wrap .recent .recent_time{
+	font-size: 0.24rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.recent_month{
+	font-size: 0.12rem;
+	text-align: center;
+}
+.recent_day{
+	font-size: 0.12rem;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_wea{
+	font-size: 0.36rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_pic{
+	width: 1rem;
+	height: 1rem;
+	/* background: red; */
+	margin: 0 auto;
+	/* 插入图片 */
+	background: url('../img/2.png') no-repeat;
+	/* 大小 */
+	background-size: 1rem 1rem;
+}
+.con3 .wrap .recent .recent_high{
+	font-size: 0.28rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_low{
+	font-size: 0.28rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_wind{
+	font-size: 0.28rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.con3 .wrap .recent .recent_level{
+	font-size: 0.28rem;
+	color: #888888;
+	font-weight: normal;
+	text-align: center;
+}
+.city_box{
+	width: 100%;
+	height: 20rem;
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.city_box .sousuo_box{
+	width: 100%;
+	height: 1.26rem;
+	background: white;
+	border-bottom: 0.04rem solid #e4e4e4;
+	padding: 0.18rem 0.49rem 0.18rem 0.36rem;
+	box-sizing: border-box;
+	/* 弹性布局  横排 */
+	display: flex;
+	/* 两端对齐 */
+	justify-content: space-between;
+}
+.city_box .sousuo_box .search_box{
+	width: 8.62rem;
+	height: 0.86rem;
+	background: #f2f2f2;
+	border-radius: 0.43rem;
+}
+.city_box .sousuo_box .button{
+	font-size: 0.36rem;
+	color: #434343;
+	line-height: 0.9rem;
+}
+/* 引入自定义字体 */
+.icon{
+	font-size: 0.5rem;
+	float: left;
+	margin-top: 0.20rem;
+	margin-left: 0.3rem;
+
+}
+.text{
+	width: 7.2rem;
+	height: 100%;
+	background: #f2f2f2;
+	border: none;
+	float: left;
+	border-radius: 0.43rem;
+	padding-left: 0.28rem;
+}
+.text:focus{
+	outline: none;
+}
+.city_box .cities{
+	width: 100%;
+	height: 14rem;
+	/* background: pink; */
+	padding-top: 0.24rem;
+	padding-right: 0.35rem;	
+	padding-left: 0.36rem;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+/* .city_box .cities:nth-child(3n){
+	margin-right: 0;
+}
+.city_box .cities::-webkit-scrollbar{
+	height: 0;
+} */
+.cities .title{
+	width: 100%;
+	height: 1.16rem;
+	/* background: yellow; */
+	font-size: 0.38rem;
+	color: #434343;
+	/* 垂直居中 */
+	line-height: 1.16rem;
+	/* 字间距 */
+	letter-spacing: 0.03rem;
+}
+.cities .con{
+	width: 100%;
+	height: auto;
+	/* 超出部分隐藏 */
+	overflow: hidden;
+}
+.con .son{
+	width: 3.17rem;
+	height: 0.81rem;
+	background: #f2f2f2;
+	border-radius: 0.4rem;
+	font-size: 0.32rem;
+	color: #434343;
+	text-align: center;
+	line-height: 0.81rem;
+	float: left;
+	margin: 0 0.25rem 0.21rem 0;
+	/* margin-right: 0.3rem; */
+	/* margin-bottom: 0.21rem; */
+}
+.cities .con .son:nth-child(3n){
+	margin-right: 0;
+}
